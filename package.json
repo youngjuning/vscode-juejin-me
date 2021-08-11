@@ -27,10 +27,17 @@
     "watch": "tsc -watch -p ./",
     "pretest": "yarn run compile && yarn run lint",
     "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "test": "node ./out/test/runTest.js",
+    "commit": "git cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    }
   },
   "gitHooks": {
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "commit-msg": "commitlint -e -V"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
@@ -41,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
     "@luozhu/eslint-config-typescript": "^1.8.1",
     "@luozhu/prettier-config": "^1.0.3",
     "@types/glob": "^7.1.3",
@@ -49,6 +57,9 @@
     "@types/vscode": "^1.59.0",
     "@typescript-eslint/eslint-plugin": "^4.14.1",
     "@typescript-eslint/parser": "^4.14.1",
+    "commitizen": "^4.2.4",
+    "commitlint-config-cz": "^0.13.2",
+    "cz-customizable": "^6.3.0",
     "eslint": "^7.19.0",
     "glob": "^7.1.6",
     "lint-staged": "^11.1.2",
