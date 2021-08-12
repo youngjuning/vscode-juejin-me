@@ -7,7 +7,7 @@
     "prestart": "rimraf dist",
     "start": "umi dev",
     "prebuild": "rimraf dist",
-    "build": "umi build",
+    "build": "HTML=none umi build",
     "postinstall": "umi generate tmp",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
     "test": "umi-test",
