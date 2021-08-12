@@ -13,3 +13,5 @@ vsc-extension-quickstart.md
 .cz-config.js
 .prettierrc.js
 commitlint.config.js
+**/node_modules/**
+yarn-error.log
