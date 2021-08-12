@@ -19,14 +19,14 @@
     "url": "https://github.com/youngjuning/luozhu.git"
   },
   "activationEvents": [
-    "onCommand:juejin-posts.helloWorld"
+    "onCommand:juejin-posts.start"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "juejin-posts.helloWorld",
-        "title": "Hello World"
+        "command": "juejin-posts.start",
+        "title": "juejin-posts: open"
       }
     ]
   },
@@ -86,5 +86,8 @@
     "vsce": "^1.96.1",
     "vscode-test": "^1.5.0",
     "yorkie": "^2.0.0"
+  },
+  "dependencies": {
+    "@luozhu/vscode-utils": "^0.1.0"
   }
 }
