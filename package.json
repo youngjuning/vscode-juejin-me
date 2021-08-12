@@ -1,8 +1,12 @@
 {
   "name": "juejin-posts",
   "displayName": "Juejin Posts",
-  "description": " 掘金文章管理",
   "version": "0.0.1",
+  "description": " 掘金文章管理",
+  "private": "true",
+  "workspaces": [
+    "web"
+  ],
   "engines": {
     "vscode": "^1.59.0"
   },
@@ -27,12 +31,15 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "yarn esbuild-base --minify",
-    "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
+    "vscode:prepublish": "yarn build:web && yarn esbuild-base --minify",
+    "preesbuild-base": "rimraf out",
+    "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node",
     "esbuild": "yarn esbuild-base --sourcemap",
     "esbuild-watch": "yarn esbuild-base --sourcemap --watch",
+    "web-build": "yarn workspace web run build",
+    "web-watch": "yarn workspace web run start",
     "test-compile": "tsc -p ./",
-    "lint": "eslint src --ext ts",
+    "lint": "eslint src --ext ts,tsx",
     "pretest": "yarn test-compile && yarn lint",
     "test": "node ./out/test/runTest.js",
     "commit": "git cz",
@@ -51,13 +58,13 @@
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ],
-    "**/*.{md,json}": [
+    "**/*.{md,json,less}": [
       "prettier --write"
     ]
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
-    "@luozhu/eslint-config-typescript": "^1.8.1",
+    "@luozhu/eslint-config-react-typescript": "^1.5.0",
     "@luozhu/prettier-config": "^1.0.3",
     "@types/glob": "^7.1.3",
     "@types/mocha": "^8.0.4",
@@ -74,6 +81,7 @@
     "lint-staged": "^11.1.2",
     "mocha": "^8.2.1",
     "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
     "typescript": "^4.1.3",
     "vsce": "^1.96.1",
     "vscode-test": "^1.5.0",

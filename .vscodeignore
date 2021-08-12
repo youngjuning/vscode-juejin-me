@@ -15,3 +15,5 @@ vsc-extension-quickstart.md
 commitlint.config.js
 **/node_modules/**
 yarn-error.log
+web/**
+!web/dist/**
