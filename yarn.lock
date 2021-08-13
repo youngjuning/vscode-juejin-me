@@ -9980,7 +9980,7 @@ umi-request@^1.2.14:
     isomorphic-fetch "^2.2.1"
     qs "^6.9.1"
 
-umi@^3.5.17:
+umi@3.5.17:
   version "3.5.17"
   resolved "https://registry.yarnpkg.com/umi/-/umi-3.5.17.tgz#d58ed323d715057cc09a6c45a1f382f1b6dd2dab"
   integrity sha512-KE2DjN4/jEadBROd2Y1wie4HN2uuZi7FxqcDPy9hCKqvLHPIy112hvpoS5IWa+1j39OCym241KfiTTb0y+vvbg==
