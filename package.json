@@ -26,7 +26,8 @@
     "commands": [
       {
         "command": "juejin-posts.start",
-        "title": "juejin-posts: open"
+        "title": "open",
+        "category": "Juejin Posts"
       }
     ]
   },
