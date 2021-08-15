@@ -32,7 +32,7 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "yarn build:web && yarn esbuild-base --minify",
+    "vscode:prepublish": "yarn web-build && yarn esbuild-base --minify",
     "preesbuild-base": "rimraf out",
     "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node",
     "esbuild": "yarn esbuild-base --sourcemap",
