@@ -1,16 +1,12 @@
+import styles from './index.less';
+
 require('./index.less');
 
 const HomePage = () => {
   return (
-    <div id="content">
-      <a href="https://juejin.cn" id="yoyo">
-        <img
-          alt="yoyo"
-          src="https://cdn.jsdelivr.net/gh/youngjuning/images/20210817163229.png"
-          width="100"
-        />
-      </a>
-    </div>
+    <>
+      <h1 className={styles.title}>Juejin Posts</h1>
+    </>
   );
 };
 
