@@ -2,8 +2,9 @@
   "name": "juejin-posts",
   "displayName": "Juejin Posts",
   "version": "0.0.1",
-  "description": " 掘金文章管理",
+  "description": " 掘金个人文章管理",
   "private": "true",
+  "icon": "assets/icon-girl.png",
   "workspaces": [
     "web"
   ],
@@ -14,9 +15,10 @@
     "Other"
   ],
   "license": "MIT",
-  "publisher": "luozhu",
+  "publisher": "youngjuning",
   "repository": {
-    "url": "https://github.com/youngjuning/luozhu.git"
+    "type": "git",
+    "url": "https://github.com/youngjuning/juejin-posts.git"
   },
   "activationEvents": [
     "onCommand:juejin-posts.start"
@@ -26,7 +28,7 @@
     "commands": [
       {
         "command": "juejin-posts.start",
-        "title": "open",
+        "title": "start",
         "category": "Juejin Posts"
       }
     ]
@@ -89,6 +91,6 @@
     "yorkie": "^2.0.0"
   },
   "dependencies": {
-    "@luozhu/vscode-utils": "^0.1.0"
+    "@luozhu/vscode-utils": "^0.2.1"
   }
 }

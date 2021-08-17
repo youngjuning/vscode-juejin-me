@@ -1,3 +1,5 @@
-# juejin-posts
+# Juejin Posts
 
-vscode 掘金文章管理插件
+Visual Studio Code 掘金文章管理扩展。
+
+![](assets/icon-yoyo.png) ![](assets/icon-girl.png) ![](assets/icon-juejin.png)

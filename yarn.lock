@@ -952,10 +952,10 @@
   resolved "https://registry.yarnpkg.com/@luozhu/prettier-config/-/prettier-config-1.0.3.tgz#ba19ba65c6d5261c250514756ed0d1b0443e4893"
   integrity sha512-2rBLWAdaKnUjPn6SOajA14LBw5OTozrBXxf3VoS5NALSbzBzg1NJS7tKCUf6QcELkxdIVmXx4Q43ApYtaRb9bQ==
 
-"@luozhu/vscode-utils@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@luozhu/vscode-utils/-/vscode-utils-0.1.0.tgz#d0a9d40e10969472be857de1d18058604fc1a030"
-  integrity sha512-gcJ0Y2xwy7WNU8fo+mt+uHEw1nBoA4uUJL+DTTPoI9vi9Hy2vQWTVr2WP4yww2VaU0tannnVJnfRVdjmtqPSuw==
+"@luozhu/vscode-utils@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@luozhu/vscode-utils/-/vscode-utils-0.2.1.tgz#5a0e2c9191a9803f3b9b40d030b65078919c3342"
+  integrity sha512-8uyeIHPdzplnL4k64L+DELtXcMIX02WYSDsuShSDovUrqNjpx/y+yBlEYa2m/GL8jFin8O774AP4scA5iv+4EA==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
