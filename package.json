@@ -91,6 +91,6 @@
     "yorkie": "^2.0.0"
   },
   "dependencies": {
-    "@luozhu/vscode-utils": "^0.2.1"
+    "@luozhu/vscode-utils": "^0.2.3"
   }
 }
