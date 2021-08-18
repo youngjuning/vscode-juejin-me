@@ -1,8 +1,21 @@
+import React from 'react';
 import styles from './index.less';
 
 require('./index.less');
 
 const HomePage = () => {
+  React.useEffect(() => {
+    // @ts-ignore
+    const vscode = typeof acquireVsCodeApi === 'function' ? acquireVsCodeApi() : null;
+    vscode.postMessage({
+      type: 'request',
+      api: 'queryPosts',
+    });
+    window.addEventListener('message', event => {
+      const message = event.data; // The JSON data our extension sent
+      console.log(message);
+    });
+  }, []);
   return (
     <>
       <h1 className={styles.title}>Juejin Posts</h1>

@@ -1,6 +1,7 @@
 import vscode from 'vscode';
 import path from 'path';
 import { getUmiContent } from '@luozhu/vscode-utils';
+import events from './events';
 
 // 追踪当前 webview 面板
 let currentPanel: vscode.WebviewPanel | undefined;
@@ -24,10 +25,11 @@ export function activate(context: vscode.ExtensionContext) {
           'Juejin Posts', // 给用户显示的面板标题
           vscode.ViewColumn.One, // 给新的 webview 面板一个编辑器视图
           {
+            // webview 面板的内容配置
             enableScripts: true,
-            // 只允许 webview 加载我们插件的 `web/dist` 目录下的资源
-            localResourceRoots: [vscode.Uri.file(path.join(context.extensionPath, 'web/dist'))],
-          } // webview 面板的内容配置
+            localResourceRoots: [vscode.Uri.file(path.join(context.extensionPath, 'web/dist'))], // 只允许 webview 加载我们插件的 `web/dist` 目录下的资源
+            retainContextWhenHidden: true, // 隐藏时保留上下文
+          }
         );
         // 设置 Logo
         currentPanel.iconPath = vscode.Uri.file(
@@ -35,6 +37,16 @@ export function activate(context: vscode.ExtensionContext) {
         );
         // 设置 HTML 内容
         currentPanel.webview.html = getUmiContent(context, currentPanel, '3.5.17');
+
+        // 处理webview中的信息
+        currentPanel.webview.onDidReceiveMessage(
+          async message => {
+            const data = await events(message);
+            currentPanel?.webview.postMessage({ data });
+          },
+          undefined,
+          context.subscriptions
+        );
 
         // 当前面板被关闭后重置
         currentPanel.onDidDispose(

@@ -72,6 +72,7 @@
     "@types/glob": "^7.1.3",
     "@types/mocha": "^8.0.4",
     "@types/node": "^12.11.7",
+    "@types/qs": "^6.9.7",
     "@types/vscode": "^1.59.0",
     "@typescript-eslint/eslint-plugin": "^4.14.1",
     "@typescript-eslint/parser": "^4.14.1",
@@ -91,6 +92,8 @@
     "yorkie": "^2.0.0"
   },
   "dependencies": {
-    "@luozhu/vscode-utils": "^0.2.3"
+    "@luozhu/vscode-utils": "^0.2.3",
+    "axios": "^0.21.1",
+    "qs": "^6.10.1"
   }
 }
