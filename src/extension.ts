@@ -17,7 +17,8 @@ export function activate(context: vscode.ExtensionContext) {
       );
       const channel = new Channel(context, currentPanel);
       channel.bind(async message => {
-        const data = await events.requests[message.method](message.params);
+        const { eventType, method, params } = message;
+        const data = await events[eventType][method](params);
         return data;
       });
     })

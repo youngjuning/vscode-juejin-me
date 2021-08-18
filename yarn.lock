@@ -952,17 +952,17 @@
   resolved "https://registry.yarnpkg.com/@luozhu/prettier-config/-/prettier-config-1.0.3.tgz#ba19ba65c6d5261c250514756ed0d1b0443e4893"
   integrity sha512-2rBLWAdaKnUjPn6SOajA14LBw5OTozrBXxf3VoS5NALSbzBzg1NJS7tKCUf6QcELkxdIVmXx4Q43ApYtaRb9bQ==
 
-"@luozhu/vscode-channel@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@luozhu/vscode-channel/-/vscode-channel-0.3.0.tgz#6410b9da508c86b28b1d098a43e4cd67fe580f84"
-  integrity sha512-fvVnqn5DLAWBKMRkr2WnwfenGolIp6qhk5BLGxmkDBHgbfgPXPOJqJCxhDB0Gz+D3uJ5k8UkUOwqTwPRqzM6PQ==
+"@luozhu/vscode-channel@^0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@luozhu/vscode-channel/-/vscode-channel-0.4.1.tgz#e869b3f648f036b217c9971d74833caa6ab7b7a4"
+  integrity sha512-YlxTKCYqaMpCuuSgZryXrv2hWI/o1GTJWm5HkJOF1Bw/dzGe338/XOXSBMzeWmQ7GBISazUdzjAq/msQYk/NIw==
   dependencies:
     nanoid "^3.1.25"
 
-"@luozhu/vscode-utils@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@luozhu/vscode-utils/-/vscode-utils-0.5.0.tgz#167ef9f0afb0781610cdc91580245e2aa3615d5c"
-  integrity sha512-YhkmNQrHGwC+ZoeejTlm/00FvcHnopakwTrhwjcBxYdWM9XsF+oZYuVQWhBUPvVG49Rs0kfYEnmSL0v6Xr1rkg==
+"@luozhu/vscode-utils@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@luozhu/vscode-utils/-/vscode-utils-0.5.1.tgz#071710ad0e967f6e0419a9ca75e27f90e0c5253a"
+  integrity sha512-69KWk5sq74Sr2e/YCZUv84KbMw5Xg7ROvPJJdETJZ+QrXlFzlGF36GcAERz3i6gGyjznfML49e/f0hRZgcBWxQ==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"

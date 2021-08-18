@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { List, Space, Button } from 'antd';
+import { List, Space, Button, Input } from 'antd';
 import { MessageOutlined, LikeOutlined, EyeOutlined } from '@ant-design/icons';
 import Channel from '@luozhu/vscode-channel';
 import styles from './index.less';
+
+const { Search } = Input;
 
 require('./index.less');
 
@@ -13,11 +15,12 @@ const IconText = ({ icon, text }) => (
   </Space>
 );
 
-let cursor = 0;
 const channel = new Channel();
 
+let cursor = 0;
 const HomePage = () => {
   const [data, setData] = useState([]);
+  const [searchData, setSearchData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [initLoading, setInitLoading] = useState(true);
   const [hasMore, setHasMore] = useState(true);
@@ -28,18 +31,17 @@ const HomePage = () => {
   }, []);
 
   const getData = async () => {
-    channel.call({
+    const { payload } = (await channel.call({
+      eventType: 'requests',
       method: 'queryPosts',
       params: { userId: '325111174662855', cursor },
-      success: message => {
-        setData(data.concat(message.data.data));
-        setLoading(false);
-        if (!message.data.has_more) {
-          setHasMore(false);
-          setLoading(true);
-        }
-      },
-    });
+    })) as any;
+    setData(data.concat(payload.data));
+    setLoading(false);
+    if (!payload.has_more) {
+      setHasMore(false);
+      setLoading(true);
+    }
   };
 
   const onLoadMore = () => {
@@ -64,14 +66,27 @@ const HomePage = () => {
       </div>
     ) : null;
 
+  const onSearch = value => {
+    const filterData = data.filter((item: any) => item.article_info.title.indexOf(value) > -1);
+    setSearchData(filterData);
+  };
+
   return (
     <>
       <h1 className={styles.title}>Juejin Posts</h1>
+      <Search
+        className={styles.search}
+        placeholder="搜索文章"
+        allowClear
+        enterButton="搜索"
+        size="large"
+        onSearch={onSearch}
+      />
       <div className={styles.postsList}>
         <List
           className="loadmore-list"
           itemLayout="vertical"
-          dataSource={data}
+          dataSource={searchData.length > 0 ? searchData : data}
           loading={initLoading}
           loadMore={loadMore}
           renderItem={(item: any) => (
