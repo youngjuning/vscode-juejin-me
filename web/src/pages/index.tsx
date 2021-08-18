@@ -1,19 +1,18 @@
 import React from 'react';
+import Channel from '@luozhu/vscode-channel';
 import styles from './index.less';
 
 require('./index.less');
 
 const HomePage = () => {
   React.useEffect(() => {
-    // @ts-ignore
-    const vscode = typeof acquireVsCodeApi === 'function' ? acquireVsCodeApi() : null;
-    vscode.postMessage({
-      type: 'request',
-      api: 'queryPosts',
-    });
-    window.addEventListener('message', event => {
-      const message = event.data; // The JSON data our extension sent
-      console.log(message);
+    const channel = new Channel();
+    channel.call({
+      method: 'request',
+      params: { api: 'queryPosts' },
+      success: message => {
+        console.log('webview 成功了', message);
+      },
     });
   }, []);
   return (

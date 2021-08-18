@@ -1,14 +1,14 @@
 import apis from './apis';
 
 export interface WebviewMessage {
-  type: 'request';
-  api: keyof typeof apis;
+  method: 'request';
+  params: any;
 }
 
 const events = async (message: WebviewMessage): Promise<any> => {
-  switch (message.type) {
+  switch (message.method) {
     case 'request': {
-      const data = await apis[message.api]();
+      const data = message?.params?.api ? await apis[message.params.api]() : null;
       return data;
     }
     default:

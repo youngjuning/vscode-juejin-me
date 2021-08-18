@@ -1,6 +1,7 @@
 import vscode from 'vscode';
 import path from 'path';
 import { getUmiContent } from '@luozhu/vscode-utils';
+import Channel from '@luozhu/vscode-channel';
 import events from './events';
 
 // 追踪当前 webview 面板
@@ -39,14 +40,11 @@ export function activate(context: vscode.ExtensionContext) {
         currentPanel.webview.html = getUmiContent(context, currentPanel, '3.5.17');
 
         // 处理webview中的信息
-        currentPanel.webview.onDidReceiveMessage(
-          async message => {
-            const data = await events(message);
-            currentPanel?.webview.postMessage({ data });
-          },
-          undefined,
-          context.subscriptions
-        );
+        const channel = new Channel(context, currentPanel.webview);
+        channel.bind('request', async message => {
+          const data = await events(message);
+          return data;
+        });
 
         // 当前面板被关闭后重置
         currentPanel.onDidDispose(

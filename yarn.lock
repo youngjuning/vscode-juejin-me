@@ -952,10 +952,15 @@
   resolved "https://registry.yarnpkg.com/@luozhu/prettier-config/-/prettier-config-1.0.3.tgz#ba19ba65c6d5261c250514756ed0d1b0443e4893"
   integrity sha512-2rBLWAdaKnUjPn6SOajA14LBw5OTozrBXxf3VoS5NALSbzBzg1NJS7tKCUf6QcELkxdIVmXx4Q43ApYtaRb9bQ==
 
-"@luozhu/vscode-utils@^0.2.3":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@luozhu/vscode-utils/-/vscode-utils-0.2.3.tgz#dbfcee84ba673f9ac7c0f5276076406fa337ec91"
-  integrity sha512-Ga+AhQxTTC/HjUpXwWOAua2aZPed4AVFPoqT4MY7jIOQkZdwbtWhlW8prZCvu1sTVkaR3kA26wDxYo7ask2sdA==
+"@luozhu/vscode-channel@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@luozhu/vscode-channel/-/vscode-channel-0.1.0.tgz#0001c6507fb755e0c815fd512363c02ca27fe60f"
+  integrity sha512-yTW6YjxKrEGBq9GX9CMg6MvpMNraIw1wevhPH3jfbeBizPFoJ6qY2HgrWS1NDByf9dzYxG2/G1XlbU6pd+rNgQ==
+
+"@luozhu/vscode-utils@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@luozhu/vscode-utils/-/vscode-utils-0.3.0.tgz#7296687e0e5c4e76a1e0e70e76b264151ac312ad"
+  integrity sha512-91Ey/brJSni+1AywcuQaUaJOyv5dlKnKN1OoYid2D3wqNkWmMohdhqzlRKw3+NGw07ootOFwKX8c2Un/dJ1yZQ==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
