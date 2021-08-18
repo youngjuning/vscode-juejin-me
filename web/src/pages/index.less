@@ -1,6 +1,28 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f3f3;
+  overflow: auto !important;
+  overflow-y: hidden;
+}
 .title {
   text-align-last: center;
+  padding: 8px 0px;
+  background-color: #ffffff;
+  margin: 0px;
 }
-.lorem {
-  padding: 0 20px;
+.postsList {
+  background-color: #ffffff;
+  flex: 1;
+  padding: 0 30px;
+  margin: 15px auto;
+  width: 100%;
+  max-width: 960px;
+  .ant-list-item-extra {
+    display: flex;
+    align-items: center;
+  }
+}
+.loadmore-list {
+  min-height: 350px;
 }

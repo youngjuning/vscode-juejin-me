@@ -952,15 +952,17 @@
   resolved "https://registry.yarnpkg.com/@luozhu/prettier-config/-/prettier-config-1.0.3.tgz#ba19ba65c6d5261c250514756ed0d1b0443e4893"
   integrity sha512-2rBLWAdaKnUjPn6SOajA14LBw5OTozrBXxf3VoS5NALSbzBzg1NJS7tKCUf6QcELkxdIVmXx4Q43ApYtaRb9bQ==
 
-"@luozhu/vscode-channel@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@luozhu/vscode-channel/-/vscode-channel-0.1.0.tgz#0001c6507fb755e0c815fd512363c02ca27fe60f"
-  integrity sha512-yTW6YjxKrEGBq9GX9CMg6MvpMNraIw1wevhPH3jfbeBizPFoJ6qY2HgrWS1NDByf9dzYxG2/G1XlbU6pd+rNgQ==
-
-"@luozhu/vscode-utils@^0.3.0":
+"@luozhu/vscode-channel@^0.3.0":
   version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@luozhu/vscode-utils/-/vscode-utils-0.3.0.tgz#7296687e0e5c4e76a1e0e70e76b264151ac312ad"
-  integrity sha512-91Ey/brJSni+1AywcuQaUaJOyv5dlKnKN1OoYid2D3wqNkWmMohdhqzlRKw3+NGw07ootOFwKX8c2Un/dJ1yZQ==
+  resolved "https://registry.yarnpkg.com/@luozhu/vscode-channel/-/vscode-channel-0.3.0.tgz#6410b9da508c86b28b1d098a43e4cd67fe580f84"
+  integrity sha512-fvVnqn5DLAWBKMRkr2WnwfenGolIp6qhk5BLGxmkDBHgbfgPXPOJqJCxhDB0Gz+D3uJ5k8UkUOwqTwPRqzM6PQ==
+  dependencies:
+    nanoid "^3.1.25"
+
+"@luozhu/vscode-utils@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@luozhu/vscode-utils/-/vscode-utils-0.5.0.tgz#167ef9f0afb0781610cdc91580245e2aa3615d5c"
+  integrity sha512-YhkmNQrHGwC+ZoeejTlm/00FvcHnopakwTrhwjcBxYdWM9XsF+oZYuVQWhBUPvVG49Rs0kfYEnmSL0v6Xr1rkg==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -6701,6 +6703,11 @@ nanoid@3.1.20:
   version "3.1.20"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.20.tgz#badc263c6b1dcf14b71efaa85f6ab4c1d6cfc788"
   integrity sha512-a1cQNyczgKbLX9jwbS/+d7W8fX/RfgYR7lVWwWOGIPNgK2m0MWvrGF6/m4kk6U3QcFMnZf3RIhL0v2Jgh/0Uxw==
+
+nanoid@^3.1.25:
+  version "3.1.25"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.25.tgz#09ca32747c0e543f0e1814b7d3793477f9c8e152"
+  integrity sha512-rdwtIXaXCLFAQbnfqDRnI6jaRHp9fTcYBjtFKE8eezcZ7LuLjhUaQGNeMXf1HmRoCH32CLz6XwX0TtxEOS/A3Q==
 
 nanomatch@^1.2.9:
   version "1.2.13"

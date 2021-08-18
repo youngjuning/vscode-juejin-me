@@ -1,11 +1,16 @@
 #yoyo {
   position: fixed;
-  bottom: 50px;
-  right: -90px;
-  opacity: 0;
-  transition: 0.25s ease-in-out;
+  bottom: 100px;
+  animation: reveal 1s forwards;
 }
-#yoyo:hover {
-  opacity: 1;
-  right: 0;
+
+@keyframes reveal {
+  from {
+    right: -70px;
+    opacity: 0;
+  }
+  to {
+    right: 0px;
+    opacity: 1;
+  }
 }

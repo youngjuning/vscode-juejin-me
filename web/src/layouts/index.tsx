@@ -8,7 +8,7 @@ export default props => {
         <img
           alt="yoyo"
           src="https://cdn.jsdelivr.net/gh/youngjuning/images/20210817163229.png"
-          width="100"
+          width="70"
         />
       </a>
     </>
