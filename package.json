@@ -1,8 +1,8 @@
 {
-  "name": "juejin-posts",
-  "displayName": "Juejin Posts",
+  "name": "juejin-me",
+  "displayName": " 掘金一下",
   "version": "0.0.1",
-  "description": " 掘金个人文章管理",
+  "description": "掘金一下是一个专注于管理你的掘金文章的 VS Code 扩展",
   "private": "true",
   "icon": "assets/icon-girl.png",
   "workspaces": [
@@ -18,18 +18,18 @@
   "publisher": "youngjuning",
   "repository": {
     "type": "git",
-    "url": "https://github.com/youngjuning/juejin-posts.git"
+    "url": "https://github.com/youngjuning/juejin-me.git"
   },
   "activationEvents": [
-    "onCommand:juejin-posts.start"
+    "onCommand:juejin-me.start"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "juejin-posts.start",
+        "command": "juejin-me.start",
         "title": "start",
-        "category": "Juejin Posts"
+        "category": "Juejin Me"
       }
     ]
   },

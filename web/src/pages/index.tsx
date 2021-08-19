@@ -18,16 +18,14 @@ const IconText = ({ icon, text }) => (
 const channel = new Channel();
 
 let cursor = 0;
+let tempData = [];
 const HomePage = () => {
   const [data, setData] = useState([]);
   const [searchData, setSearchData] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [initLoading, setInitLoading] = useState(true);
-  const [hasMore, setHasMore] = useState(true);
 
   useEffect(() => {
     getData();
-    setInitLoading(false);
   }, []);
 
   const getData = async () => {
@@ -36,35 +34,16 @@ const HomePage = () => {
       method: 'queryPosts',
       params: { userId: '325111174662855', cursor },
     })) as any;
-    setData(data.concat(payload.data));
-    setLoading(false);
+    tempData = tempData.concat(payload.data);
+    setData(tempData);
     if (!payload.has_more) {
-      setHasMore(false);
-      setLoading(true);
-    }
-  };
-
-  const onLoadMore = () => {
-    if (hasMore) {
+      setInitLoading(false);
+      tempData = [];
+    } else {
       cursor += 10;
       getData();
     }
   };
-
-  const loadMore =
-    !initLoading && !loading ? (
-      <div
-        style={{
-          textAlign: 'center',
-          marginTop: 12,
-          marginBottom: 12,
-          height: 32,
-          lineHeight: '32px',
-        }}
-      >
-        <Button onClick={onLoadMore}>加载更多</Button>
-      </div>
-    ) : null;
 
   const onSearch = value => {
     const filterData = data.filter((item: any) => item.article_info.title.indexOf(value) > -1);
@@ -73,22 +52,21 @@ const HomePage = () => {
 
   return (
     <>
-      <h1 className={styles.title}>Juejin Posts</h1>
+      <h1 className={styles.title}>洛竹</h1>
       <Search
         className={styles.search}
-        placeholder="搜索文章"
+        disabled={initLoading}
+        placeholder="Truth is endless. Keep searching..."
         allowClear
-        enterButton="搜索"
+        enterButton="掘金一下"
         size="large"
         onSearch={onSearch}
       />
       <div className={styles.postsList}>
         <List
-          className="loadmore-list"
           itemLayout="vertical"
           dataSource={searchData.length > 0 ? searchData : data}
-          loading={initLoading}
-          loadMore={loadMore}
+          loading={{ spinning: initLoading, tip: '数据加载中', size: 'large' }}
           renderItem={(item: any) => (
             <List.Item
               key={item.article_id}

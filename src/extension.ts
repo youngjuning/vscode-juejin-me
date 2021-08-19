@@ -4,14 +4,14 @@ import Channel from '@luozhu/vscode-channel';
 import events from './events';
 
 export function activate(context: vscode.ExtensionContext) {
-  console.log('Congratulations, your extension "juejin-posts" is now active!');
+  console.log('Congratulations, your extension "juejin-me" is now active!');
 
   context.subscriptions.push(
-    vscode.commands.registerCommand('juejin-posts.start', async () => {
+    vscode.commands.registerCommand('juejin-me.start', async () => {
       const currentPanel = createUmiWebviewPanel(
         context,
-        'juejin-posts',
-        'Juejin Posts',
+        'juejin-me',
+        'Juejin Me',
         'assets/icon-juejin.png',
         '3.5.17'
       );
