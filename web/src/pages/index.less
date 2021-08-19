@@ -1,30 +1,50 @@
 #root {
   display: flex;
   flex-direction: column;
-  background-color: #f3f3f3;
   overflow: auto !important;
   overflow-y: hidden;
+  background-color: #f3f3f3;
 }
 .title {
   text-align-last: center;
+  background-color: #ffffff;
   padding: 8px 0px;
-  background-color: #ffffff;
   margin: 0px;
-}
-.postsList {
-  background-color: #ffffff;
-  flex: 1;
-  padding: 0 30px;
-  margin: 15px auto;
-  width: 100%;
-  max-width: 960px;
-  .ant-list-item-extra {
-    display: flex;
-    align-items: center;
-  }
 }
 .search {
   width: 400px;
   margin: 0 auto;
   margin-top: 20px;
+}
+.postsList {
+  flex: 1;
+  background-color: #ffffff;
+  margin: 15px auto;
+  width: 100%;
+  max-width: 960px;
+  padding: 0 15px;
+  .ant-list,
+  .ant-spin-nested-loading {
+    height: 100%;
+  }
+  .ant-list-item-extra {
+    display: flex;
+    align-items: center;
+  }
+}
+
+body.vscode-dark {
+  #root {
+    background-color: var(--vscode-editor-background);
+  }
+  .title,
+  .postsList {
+    background-color: #ffffff;
+  }
+  .title {
+    color: black;
+  }
+  .ant-spin-blur .ant-list-items {
+    background-color: #ffffff;
+  }
 }

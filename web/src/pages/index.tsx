@@ -52,7 +52,7 @@ const HomePage = () => {
 
   return (
     <>
-      <h1 className={styles.title}>洛竹</h1>
+      <h1 className="title">洛竹</h1>
       <Search
         className={styles.search}
         disabled={initLoading}
@@ -62,7 +62,7 @@ const HomePage = () => {
         size="large"
         onSearch={onSearch}
       />
-      <div className={styles.postsList}>
+      <div className="postsList">
         <List
           itemLayout="vertical"
           dataSource={searchData.length > 0 ? searchData : data}
