@@ -97,7 +97,7 @@
     "commit": "git cz",
     "package": "vsce package --no-yarn",
     "release": "standard-version",
-    "publish": "vsce publish --no-yarn"
+    "publish-it": "vsce publish --no-yarn"
   },
   "config": {
     "commitizen": {
