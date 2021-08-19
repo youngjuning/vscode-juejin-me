@@ -36,4 +36,4 @@
 
 |      悠悠和他的船员       |       洛竹早茶馆       |      悠悠和他的姐姐       |
 | :-----------------------: | :--------------------: | :-----------------------: |
-| ![](assets/icon-yoyo.png) | ![](assets/luozhu.png) | ![](assets/icon-girl.png) |
+| ![](assets/icon-yoyo.png) | ![](assets/luozhu.png) | ![](assets/icon-luozhu.png) |
