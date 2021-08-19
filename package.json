@@ -96,7 +96,8 @@
     "test": "node ./out/test/runTest.js",
     "commit": "git cz",
     "package": "vsce package --no-yarn",
-    "release": "standard-version"
+    "release": "standard-version",
+    "publish": "vsce publish --no-yarn"
   },
   "config": {
     "commitizen": {
