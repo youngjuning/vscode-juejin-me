@@ -952,10 +952,10 @@
   resolved "https://registry.yarnpkg.com/@luozhu/prettier-config/-/prettier-config-1.0.3.tgz#ba19ba65c6d5261c250514756ed0d1b0443e4893"
   integrity sha512-2rBLWAdaKnUjPn6SOajA14LBw5OTozrBXxf3VoS5NALSbzBzg1NJS7tKCUf6QcELkxdIVmXx4Q43ApYtaRb9bQ==
 
-"@luozhu/vscode-channel@^0.4.5":
-  version "0.4.5"
-  resolved "https://registry.yarnpkg.com/@luozhu/vscode-channel/-/vscode-channel-0.4.5.tgz#b9ba886c866435ad4d8c1a0b7c4700901ba34e58"
-  integrity sha512-kpFbwfrtRgCGPvtKAV35DXxQn2Q2u6oodnsfbTXw97neGqC7w8fvBvbBttqMxT2ioFTcvIkrKwJ2a4HR9mmBXw==
+"@luozhu/vscode-channel@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@luozhu/vscode-channel/-/vscode-channel-0.5.0.tgz#7a60120bf30c6cfda5feb9d6be8d349aac48ecb6"
+  integrity sha512-NLKG1IZdqhNukyYXEtF0CmoJb4aTaDLNgdPJqY0bif6+DXMKiNxOsfiyGOs0OVnXXhvlM3EoXh/Gw8UBxcbz1w==
   dependencies:
     nanoid "^3.1.25"
 
