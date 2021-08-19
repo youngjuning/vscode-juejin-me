@@ -51,32 +51,36 @@
         "command": "juejin-me.configUserId",
         "title": "Config User Id",
         "category": "Juejin Me"
-      },{
+      },
+      {
         "command": "juejin-me.author",
         "title": "Author",
         "category": "Juejin Me"
       }
     ],
-    "keybindings": [{
-      "command": "juejin-me.start",
-      "key": "cmd+ctrl+j",
-      "mac": "cmd+ctrl+j"
-    },{
-      "command": "juejin-me.configUserId",
-      "key": "cmd+ctrl+i",
-      "mac": "cmd+ctrl+i"
-    }],
+    "keybindings": [
+      {
+        "command": "juejin-me.start",
+        "key": "cmd+ctrl+j",
+        "mac": "cmd+ctrl+j"
+      },
+      {
+        "command": "juejin-me.configUserId",
+        "key": "cmd+ctrl+i",
+        "mac": "cmd+ctrl+i"
+      }
+    ],
     "configuration": {
-			"title": "Juejin Me",
-			"type": "object",
-			"properties": {
-				"juejin-me.userId": {
-					"type": "string",
-					"default": "325111174662855",
-					"description": "掘金用户 ID"
-				}
-			}
-		}
+      "title": "Juejin Me",
+      "type": "object",
+      "properties": {
+        "juejin-me.userId": {
+          "type": "string",
+          "default": "325111174662855",
+          "description": "掘金用户 ID"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "yarn web-build && yarn esbuild-base --minify",
@@ -91,7 +95,8 @@
     "pretest": "yarn test-compile && yarn lint",
     "test": "node ./out/test/runTest.js",
     "commit": "git cz",
-    "package": "vsce package --no-yarn"
+    "package": "vsce package --no-yarn",
+    "release": "standard-version"
   },
   "config": {
     "commitizen": {
@@ -131,6 +136,7 @@
     "mocha": "^8.2.1",
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
+    "standard-version": "^9.3.1",
     "typescript": "^4.1.3",
     "vsce": "^1.96.1",
     "vscode-test": "^1.5.0",
