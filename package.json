@@ -12,7 +12,17 @@
     "vscode": "^1.59.0"
   },
   "categories": [
+    "Extension Packs",
+    "Notebooks",
     "Other"
+  ],
+  "keywords": [
+    "juejin",
+    "掘金",
+    "前端",
+    "React",
+    "后端",
+    "Blog"
   ],
   "license": "MIT",
   "publisher": "youngjuning",
@@ -21,8 +31,12 @@
     "url": "https://github.com/youngjuning/juejin-me.git"
   },
   "activationEvents": [
+    "*",
     "onCommand:juejin-me.start",
     "onCommand:juejin-me.configUserId"
+  ],
+  "extensionPack": [
+    "youngjuning.wordcount-juejin"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -38,6 +52,15 @@
         "category": "Juejin Me"
       }
     ],
+    "keybindings": [{
+      "command": "juejin-me.start",
+      "key": "cmd+ctrl+j",
+      "mac": "cmd+ctrl+j"
+    },{
+      "command": "juejin-me.configUserId",
+      "key": "cmd+ctrl+i",
+      "mac": "cmd+ctrl+i"
+    }],
     "configuration": {
 			"title": "Juejin Me",
 			"type": "object",
