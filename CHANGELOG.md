@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2](https://github.com/youngjuning/juejin-me/compare/v0.0.1...v0.0.2) (2021-08-19)
+
+
+### Bug Fixes
+
+* 更换 Icon ([aa8f1ab](https://github.com/youngjuning/juejin-me/commit/aa8f1ab3232d3a22a8a79bf4c5ab81eede060b4d))
+
 ### 0.0.1 (2021-08-19)
 
 
