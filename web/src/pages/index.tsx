@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { List, Space, Button, Input } from 'antd';
+import { List, Space, Modal, Input } from 'antd';
 import { MessageOutlined, LikeOutlined, EyeOutlined } from '@ant-design/icons';
 import Channel from '@luozhu/vscode-channel';
 import styles from './index.less';
@@ -16,7 +16,6 @@ const IconText = ({ icon, text }) => (
 );
 
 const channel = new Channel();
-
 let cursor = 0;
 let tempData = [];
 const HomePage = () => {
@@ -25,6 +24,25 @@ const HomePage = () => {
   const [initLoading, setInitLoading] = useState(true);
 
   useEffect(() => {
+    channel.bind(async message => {
+      switch (message.method) {
+        case 'showAuthor': {
+          Modal.info({
+            title: '洛竹',
+            content: (
+              <div>
+                大家好，我是洛竹🎋一只住在杭城的木系前端🧚🏻‍♀️，如果你喜欢我的文章📚，可以通过
+                <a href="https://juejin.cn/user/325111174662855/posts">点赞</a>帮我聚集灵力⭐️。
+              </div>
+            ),
+            okText: <a href="https://juejin.cn/user/325111174662855/posts">点赞 o(￣▽￣)ｄ</a>,
+          });
+          break;
+        }
+        default:
+          break;
+      }
+    });
     getData();
   }, []);
 
