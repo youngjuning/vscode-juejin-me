@@ -952,11 +952,12 @@
   resolved "https://registry.yarnpkg.com/@luozhu/prettier-config/-/prettier-config-1.0.3.tgz#ba19ba65c6d5261c250514756ed0d1b0443e4893"
   integrity sha512-2rBLWAdaKnUjPn6SOajA14LBw5OTozrBXxf3VoS5NALSbzBzg1NJS7tKCUf6QcELkxdIVmXx4Q43ApYtaRb9bQ==
 
-"@luozhu/vscode-channel@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@luozhu/vscode-channel/-/vscode-channel-0.5.0.tgz#7a60120bf30c6cfda5feb9d6be8d349aac48ecb6"
-  integrity sha512-NLKG1IZdqhNukyYXEtF0CmoJb4aTaDLNgdPJqY0bif6+DXMKiNxOsfiyGOs0OVnXXhvlM3EoXh/Gw8UBxcbz1w==
+"@luozhu/vscode-channel@^0.5.5":
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/@luozhu/vscode-channel/-/vscode-channel-0.5.5.tgz#86e1218ad7dd0f9221333990a95b0b55c8ad0d0d"
+  integrity sha512-pBcb16SgqqAnBQ9YviHb5pKyk2A2BUcSxqmQbo3JI6zugPd7nUGdfCWL6iZCsciF564gdem7L/lVdqnhFlIzyw==
   dependencies:
+    lodash.get "^4.4.2"
     nanoid "^3.1.25"
 
 "@luozhu/vscode-utils@^0.5.1":
@@ -6314,6 +6315,11 @@ lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
   integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
+
+lodash.get@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
+  integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
 
 lodash.isequal@^4.5.0:
   version "4.5.0"

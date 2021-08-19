@@ -1,5 +1,5 @@
 import vscode from 'vscode';
-import request from './request';
+import request from '../utils/request';
 
 const queryPosts = async (params: { cursor: string }): Promise<any> => {
   const { userId } = vscode.workspace.getConfiguration('juejin-me');

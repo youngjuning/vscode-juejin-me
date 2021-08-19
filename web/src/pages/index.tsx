@@ -45,10 +45,9 @@ const HomePage = () => {
     });
     getData();
   }, []);
-
   const getData = async () => {
     const { payload } = (await channel.call({
-      eventType: 'requests',
+      eventType: 'request',
       method: 'queryPosts',
       params: { cursor },
     })) as any;

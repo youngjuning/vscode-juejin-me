@@ -22,7 +22,7 @@ export function activate(context: vscode.ExtensionContext) {
         const { eventType, method, params } = message;
         const data = await events[eventType][method](params);
         return data;
-      });
+      }, vscode);
     })
   );
   context.subscriptions.push(

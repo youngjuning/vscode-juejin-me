@@ -1,5 +1,5 @@
 import requests from './requests';
 
 export default {
-  requests,
+  request: requests,
 };

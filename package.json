@@ -137,7 +137,7 @@
     "yorkie": "^2.0.0"
   },
   "dependencies": {
-    "@luozhu/vscode-channel": "^0.5.0",
+    "@luozhu/vscode-channel": "^0.5.5",
     "@luozhu/vscode-utils": "^0.5.1",
     "axios": "^0.21.1",
     "qs": "^6.10.1"
