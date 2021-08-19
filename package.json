@@ -31,7 +31,18 @@
         "title": "start",
         "category": "Juejin Me"
       }
-    ]
+    ],
+    "configuration": {
+			"title": "Juejin Me",
+			"type": "object",
+			"properties": {
+				"juejin-me.userId": {
+					"type": "string",
+					"default": "325111174662855",
+					"description": "掘金用户 ID"
+				}
+			}
+		}
   },
   "scripts": {
     "vscode:prepublish": "yarn web-build && yarn esbuild-base --minify",

@@ -20,7 +20,7 @@ const channel = new Channel();
 let cursor = 0;
 let tempData = [];
 const HomePage = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([]) as any;
   const [searchData, setSearchData] = useState([]);
   const [initLoading, setInitLoading] = useState(true);
 
@@ -32,7 +32,7 @@ const HomePage = () => {
     const { payload } = (await channel.call({
       eventType: 'requests',
       method: 'queryPosts',
-      params: { userId: '325111174662855', cursor },
+      params: { cursor },
     })) as any;
     tempData = tempData.concat(payload.data);
     setData(tempData);
@@ -50,9 +50,20 @@ const HomePage = () => {
     setSearchData(filterData);
   };
 
+  const userInfo = data[0] ? data[0].author_user_info : {};
   return (
     <>
-      <h1 className="title">洛竹</h1>
+      <div className="header">
+        {userInfo.avatar_large ? (
+          <img
+            src={userInfo.avatar_large}
+            alt="掘金一下"
+            width="40px"
+            style={{ borderRadius: '100%', marginRight: '12px' }}
+          />
+        ) : null}
+        {userInfo.user_name || '掘金一下'}
+      </div>
       <Search
         className={styles.search}
         disabled={initLoading}
