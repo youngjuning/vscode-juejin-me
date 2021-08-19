@@ -21,14 +21,20 @@
     "url": "https://github.com/youngjuning/juejin-me.git"
   },
   "activationEvents": [
-    "onCommand:juejin-me.start"
+    "onCommand:juejin-me.start",
+    "onCommand:juejin-me.configUserId"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "juejin-me.start",
-        "title": "start",
+        "title": "Start",
+        "category": "Juejin Me"
+      },
+      {
+        "command": "juejin-me.configUserId",
+        "title": "Config User Id",
         "category": "Juejin Me"
       }
     ],

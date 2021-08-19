@@ -46,7 +46,10 @@ const HomePage = () => {
   };
 
   const onSearch = value => {
-    const filterData = data.filter((item: any) => item.article_info.title.indexOf(value) > -1);
+    const filterData = data.filter(
+      (item: any) =>
+        item.article_info.title.match(value) || item.article_info.brief_content.match(value)
+    );
     setSearchData(filterData);
   };
 

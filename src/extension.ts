@@ -23,6 +23,22 @@ export function activate(context: vscode.ExtensionContext) {
       });
     })
   );
+  context.subscriptions.push(
+    vscode.commands.registerCommand('juejin-me.configUserId', async () => {
+      const userId = await vscode.window.showInputBox({
+        placeHolder: '请输入掘金用户 ID',
+        validateInput: value => {
+          if (value) {
+            return null;
+          }
+          return '请输入用户 ID';
+        },
+      });
+      const config = vscode.workspace.getConfiguration('juejin-me');
+
+      config.update('userId', userId, true);
+    })
+  );
 }
 
 export function deactivate() {}
