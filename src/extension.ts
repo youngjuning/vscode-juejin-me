@@ -13,7 +13,7 @@ export function activate(context: vscode.ExtensionContext) {
         context,
         'juejin-me',
         'Juejin Me',
-        'assets/icon-juejin.png',
+        'assets/icon-luozhu.png',
         '3.5.17'
       );
       // 处理 webview 中的信息
