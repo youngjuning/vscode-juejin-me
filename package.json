@@ -101,7 +101,7 @@
     "test": "node ./out/test/runTest.js",
     "commit": "git cz",
     "package": "vsce package --no-yarn",
-    "release": "standard-version",
+    "release-it": "standard-version",
     "publish-it": "vsce publish --no-yarn"
   },
   "config": {
