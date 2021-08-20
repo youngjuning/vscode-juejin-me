@@ -4,7 +4,7 @@
   "version": "0.0.3",
   "description": "掘金一下是一个专注于管理你的掘金文章的 VS Code 扩展",
   "private": "true",
-  "icon": "assets/icon-luozhu.png",
+  "icon": "assets/icon.png",
   "workspaces": [
     "web"
   ],
