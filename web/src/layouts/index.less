@@ -1,3 +1,14 @@
+// 隐藏 scrollbar http://caibaojian.com/hide-scrollbar.html
+#root::-webkit-scrollbar {
+  width: 0 !important;
+}
+#root {
+  -ms-overflow-style: none;
+}
+#root {
+  overflow: -moz-scrollbars-none;
+}
+
 #yoyo {
   position: fixed;
   bottom: 100px;
