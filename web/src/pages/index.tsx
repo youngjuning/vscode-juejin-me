@@ -29,6 +29,7 @@ const HomePage = () => {
         case 'showAuthor': {
           Modal.info({
             title: '洛竹',
+            closable: true,
             content: (
               <div>
                 大家好，我是洛竹🎋一只住在杭城的木系前端🧚🏻‍♀️，如果你喜欢我的文章📚，可以通过
