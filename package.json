@@ -61,13 +61,18 @@
     "keybindings": [
       {
         "command": "juejin-me.start",
-        "key": "cmd+ctrl+j",
+        "key": "ctrl+alt+j",
         "mac": "cmd+ctrl+j"
       },
       {
         "command": "juejin-me.configUserId",
-        "key": "cmd+ctrl+i",
+        "key": "ctrl+alt+i",
         "mac": "cmd+ctrl+i"
+      },
+      {
+        "command": "juejin-me.configUserId",
+        "key": "ctrl+alt+l",
+        "mac": "cmd+ctrl+l"
       }
     ],
     "configuration": {
