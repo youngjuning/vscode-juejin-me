@@ -43,7 +43,7 @@ export function activate(context: vscode.ExtensionContext) {
   );
 
   context.subscriptions.push(
-    vscode.commands.registerCommand('juejin-me.author', () => {
+    vscode.commands.registerCommand('juejin-me.showAuthor', () => {
       if (!currentPanel) {
         vscode.window.showInformationMessage('大家好，我是洛竹🎋一只住在杭城的木系前端🧚🏻‍♀️。');
       } else {

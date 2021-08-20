@@ -34,7 +34,7 @@
     "*",
     "onCommand:juejin-me.start",
     "onCommand:juejin-me.configUserId",
-    "onCommand:juejin-me.author"
+    "onCommand:juejin-me.showAuthor"
   ],
   "extensionPack": [
     "youngjuning.wordcount-juejin"
@@ -53,8 +53,8 @@
         "category": "Juejin Me"
       },
       {
-        "command": "juejin-me.author",
-        "title": "Author",
+        "command": "juejin-me.showAuthor",
+        "title": "Show Author",
         "category": "Juejin Me"
       }
     ],
@@ -70,7 +70,7 @@
         "mac": "cmd+ctrl+i"
       },
       {
-        "command": "juejin-me.configUserId",
+        "command": "juejin-me.showAuthor",
         "key": "ctrl+alt+l",
         "mac": "cmd+ctrl+l"
       }
