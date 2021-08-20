@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { List, Space, Modal, Input } from 'antd';
-import { MessageOutlined, LikeOutlined, EyeOutlined } from '@ant-design/icons';
+import { List, Space, Modal, Input, Radio } from 'antd';
+import _union from 'lodash.union';
+import {
+  MessageOutlined,
+  LikeOutlined,
+  EyeOutlined,
+  UnorderedListOutlined,
+} from '@ant-design/icons';
 import Channel from '@luozhu/vscode-channel';
 import styles from './index.less';
 
@@ -17,10 +23,13 @@ const IconText = ({ icon, text }) => (
 
 const channel = new Channel();
 let cursor = 0;
-let tempData = [];
+let tempData: any[] = [];
 const HomePage = () => {
   const [data, setData] = useState([]) as any;
-  const [searchData, setSearchData] = useState([]);
+  const [categories, setCategories] = useState([]) as any[];
+  const [searchData, setSearchData] = useState(null);
+  const [searchValue, setSearchValue] = useState('');
+  const [category, setCategory] = useState('全部');
   const [initLoading, setInitLoading] = useState(true);
 
   useEffect(() => {
@@ -46,6 +55,7 @@ const HomePage = () => {
     });
     getData();
   }, []);
+
   const getData = async () => {
     const { payload } = (await channel.call({
       eventType: 'request',
@@ -56,6 +66,7 @@ const HomePage = () => {
     setData(tempData);
     if (!payload.has_more) {
       setInitLoading(false);
+      setCategories(_union(['全部', ...tempData.map(item => item.category.category_name)]));
       tempData = [];
     } else {
       cursor += 10;
@@ -64,12 +75,32 @@ const HomePage = () => {
   };
 
   const onSearch = value => {
-    const filterData = data.filter(
-      (item: any) =>
-        item.article_info.title.match(value) || item.article_info.brief_content.match(value)
-    );
-    setSearchData(filterData);
+    setSearchValue(value);
   };
+  const onFilterCategory = e => {
+    const { value } = e.target;
+    setCategory(value);
+  };
+
+  useEffect(() => {
+    const searchResult =
+      category === '全部'
+        ? data
+        : data.filter((item: any) => item.category.category_name === category);
+    const result =
+      searchValue === ''
+        ? searchResult
+        : searchResult.filter(
+            (item: any) =>
+              item.article_info.title.match(searchValue) ||
+              item.article_info.brief_content.match(searchValue)
+          );
+    if (category === '全部' && searchValue === '') {
+      setSearchData(null);
+    } else {
+      setSearchData(result);
+    }
+  }, [searchValue, category]);
 
   const userInfo = data[0] ? data[0].author_user_info : {};
   return (
@@ -94,10 +125,22 @@ const HomePage = () => {
         size="large"
         onSearch={onSearch}
       />
+      <Radio.Group
+        defaultValue="全部"
+        buttonStyle="solid"
+        className="selectCategory"
+        onChange={onFilterCategory}
+      >
+        {categories.map(item => (
+          <Radio.Button key={item} value={item}>
+            {item}
+          </Radio.Button>
+        ))}
+      </Radio.Group>
       <div className="postsList">
         <List
           itemLayout="vertical"
-          dataSource={searchData.length > 0 ? searchData : data}
+          dataSource={searchData || data}
           loading={{ spinning: initLoading, tip: '数据加载中', size: 'large' }}
           renderItem={(item: any) => (
             <List.Item
@@ -116,6 +159,11 @@ const HomePage = () => {
                 <IconText
                   icon={MessageOutlined}
                   text={item.article_info.comment_count}
+                  key="list-vertical-message"
+                />,
+                <IconText
+                  icon={UnorderedListOutlined}
+                  text={item.category.category_name}
                   key="list-vertical-message"
                 />,
               ]}

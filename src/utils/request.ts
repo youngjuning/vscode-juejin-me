@@ -1,5 +1,6 @@
 /* eslint-disable no-param-reassign */
 import axios from 'axios';
+import vscode from 'vscode';
 import qs from 'qs';
 
 // 中文文档: http://t.cn/ROfXFuj
@@ -18,7 +19,7 @@ request.interceptors.request.use(
     return config;
   },
   error => {
-    // TODO: 对请求错误做些什么
+    vscode.window.showErrorMessage(error.message);
     return Promise.reject(error);
   }
 );
@@ -30,9 +31,7 @@ request.interceptors.response.use(
     return data;
   },
   error => {
-    // TODO: 对响应错误做点什么
-    console.log(error);
-
+    vscode.window.showErrorMessage(error.message);
     return Promise.reject(error);
   }
 );
