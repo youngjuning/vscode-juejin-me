@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { List, Space, Modal, Input, Radio } from 'antd';
+import { List, Space, Modal, Input, Radio, BackTop } from 'antd';
 import _union from 'lodash.union';
 import {
   MessageOutlined,
@@ -105,6 +105,7 @@ const HomePage = () => {
   const userInfo = data[0] ? data[0].author_user_info : {};
   return (
     <>
+      <BackTop target={() => document.querySelector('#root') as HTMLElement} />
       <div className="header">
         {userInfo.avatar_large ? (
           <img
@@ -171,6 +172,12 @@ const HomePage = () => {
                 <img width="120px" height="80px" alt="cover" src={item.article_info.cover_image} />
               }
             >
+              <List.Item.Meta
+                description={`${item.category.category_name} | ${item.tags
+                  .map(tag => tag.tag_name)
+                  .filter(tagName => tagName !== item.category.category_name)
+                  .join(' · ')}`}
+              />
               <List.Item.Meta
                 title={
                   <a href={`https://juejin.cn/post/${item.article_info.article_id}`}>
