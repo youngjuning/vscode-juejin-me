@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.9](https://github.com/youngjuning/juejin-me/compare/v0.0.8...v0.0.9) (2021-08-22)
+
+
+### Features
+
+* add BackTop and tags ([2de45ff](https://github.com/youngjuning/juejin-me/commit/2de45ff55513329f76e35c8a9d0156dee98be9ef))
+* add BackTop component ([d19623d](https://github.com/youngjuning/juejin-me/commit/d19623d761ec9ba38a5f96aeaf32c7e0735125a3))
+
 ### [0.0.8](https://github.com/youngjuning/juejin-me/compare/v0.0.7...v0.0.8) (2021-08-20)
 
 ### [0.0.7](https://github.com/youngjuning/juejin-me/compare/v0.0.6...v0.0.7) (2021-08-20)
