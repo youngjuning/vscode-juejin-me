@@ -1,7 +1,7 @@
 {
   "name": "juejin-me",
   "displayName": "掘金一下",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "掘金一下是一个专注于管理你的掘金文章的 VS Code 扩展",
   "private": "true",
   "icon": "assets/icon.png",

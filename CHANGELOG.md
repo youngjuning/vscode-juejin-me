@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.12](https://github.com/youngjuning/juejin-me/compare/v0.0.11...v0.0.12) (2021-08-22)
+
+
+### Features
+
+* i18n ([6b042c3](https://github.com/youngjuning/juejin-me/commit/6b042c3fc9e54b12f21ab16fc78cbef309d538e6))
+
 ### [0.0.11](https://github.com/youngjuning/juejin-me/compare/v0.0.10...v0.0.11) (2021-08-22)
 
 ### [0.0.10](https://github.com/youngjuning/juejin-me/compare/v0.0.9...v0.0.10) (2021-08-22)
