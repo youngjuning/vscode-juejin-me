@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { List, Space, Modal, Input, Radio, BackTop } from 'antd';
 import _union from 'lodash.union';
-import {
-  MessageOutlined,
-  LikeOutlined,
-  EyeOutlined,
-  UnorderedListOutlined,
-} from '@ant-design/icons';
+import { MessageOutlined, LikeOutlined, EyeOutlined } from '@ant-design/icons';
 import Channel from '@luozhu/vscode-channel';
 import styles from './index.less';
 
@@ -77,6 +72,12 @@ const HomePage = () => {
   const onSearch = value => {
     setSearchValue(value);
   };
+  const onSearchValueChange = event => {
+    const { value } = event.target;
+    if (value === '') {
+      setSearchValue('');
+    }
+  };
   const onFilterCategory = e => {
     const { value } = e.target;
     setCategory(value);
@@ -106,12 +107,19 @@ const HomePage = () => {
   return (
     <>
       <BackTop target={() => document.querySelector('#root') as HTMLElement} />
-      <div className="header">
+      <div
+        className="header"
+        onDoubleClick={() => {
+          document.querySelector('#root')!.scrollTop = 0;
+          document.querySelector('#root')!.scrollTop = 0;
+        }}
+      >
         {userInfo.avatar_large ? (
           <img
             src={userInfo.avatar_large}
             alt="掘金一下"
-            width="40px"
+            width="60px"
+            className="logo"
             style={{ borderRadius: '100%', marginRight: '12px' }}
           />
         ) : null}
@@ -124,6 +132,7 @@ const HomePage = () => {
         allowClear
         enterButton="掘金一下"
         size="large"
+        onChange={onSearchValueChange}
         onSearch={onSearch}
       />
       <Radio.Group
@@ -160,11 +169,6 @@ const HomePage = () => {
                 <IconText
                   icon={MessageOutlined}
                   text={item.article_info.comment_count}
-                  key="list-vertical-message"
-                />,
-                <IconText
-                  icon={UnorderedListOutlined}
-                  text={item.category.category_name}
                   key="list-vertical-message"
                 />,
               ]}
