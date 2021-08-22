@@ -10625,6 +10625,11 @@ vsce@^1.96.1:
     yauzl "^2.3.1"
     yazl "^2.2.2"
 
+vscode-nls-i18n@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/vscode-nls-i18n/-/vscode-nls-i18n-0.2.4.tgz#f8fcf1bd03c2ae2420627131b47157394e5f7638"
+  integrity sha512-1gf+s5qznJ6d5e5FavJ/sjzx/VdRMtZcVc8bjKo32mQPqAx+Bzgm0ur46/el1vAO4UGmCMQjlH8sHQdjEln7zQ==
+
 vscode-test@^1.5.0:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/vscode-test/-/vscode-test-1.6.1.tgz#44254c67036de92b00fdd72f6ace5f1854e1a563"

@@ -4,5 +4,8 @@
   "contributes.commands.configUserId.title": "Config User Id",
   "contributes.commands.showAuthor.title": "Show Author",
   "configuration.title": "Juejin Me",
-  "configuration.properties.juejin-me.userId": "Juejin User Id"
+  "configuration.properties.juejin-me.userId": "Juejin User Id",
+  "extension.activeLog": "Congratulations, your extension \"juejin-me\" is now active!",
+  "extension.juejin-me.configUserId.placeHolder": "Please input your juejin user id",
+  "extension.juejin-me.configUserId.validateInput": "Please input your user id"
 }

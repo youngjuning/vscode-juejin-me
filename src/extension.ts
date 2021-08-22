@@ -1,12 +1,14 @@
 import vscode from 'vscode';
 import { createUmiWebviewPanel } from '@luozhu/vscode-utils';
 import Channel from '@luozhu/vscode-channel';
+import { init, localize } from 'vscode-nls-i18n';
 import events from './events';
 
 let currentPanel: vscode.WebviewPanel | undefined;
 let channel: Channel;
 export function activate(context: vscode.ExtensionContext) {
-  console.log('Congratulations, your extension "juejin-me" is now active!');
+  init(context.extensionPath);
+  console.log(localize('extension.activeLog'));
   context.subscriptions.push(
     vscode.commands.registerCommand('juejin-me.start', async () => {
       currentPanel = createUmiWebviewPanel(
@@ -28,12 +30,12 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
     vscode.commands.registerCommand('juejin-me.configUserId', async () => {
       const userId = await vscode.window.showInputBox({
-        placeHolder: '请输入掘金用户 ID',
+        placeHolder: localize('extension.juejin-me.configUserId.placeHolder'),
         validateInput: value => {
           if (value) {
             return null;
           }
-          return '请输入用户 ID';
+          return localize('extension.juejin-me.configUserId.validateInput');
         },
       });
       const config = vscode.workspace.getConfiguration('juejin-me');
