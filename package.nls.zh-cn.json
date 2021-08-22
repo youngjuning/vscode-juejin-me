@@ -1,3 +1,8 @@
 {
-  "displayName": "掘金一下"
+  "contributes.commands.category.juejin-me": "掘金一下",
+  "contributes.commands.start.title": "开始",
+  "contributes.commands.configUserId.title": "配置掘金用户 Id",
+  "contributes.commands.showAuthor.title": "显示作者",
+  "configuration.title": "掘金一下",
+  "configuration.properties.juejin-me.userId": "掘金用户 Id"
 }

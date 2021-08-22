@@ -1,6 +1,6 @@
 {
   "name": "juejin-me",
-  "displayName": "%displayName%",
+  "displayName": "掘金一下",
   "version": "0.0.10",
   "description": "掘金一下是一个专注于管理你的掘金文章的 VS Code 扩展",
   "private": "true",
@@ -44,18 +44,18 @@
     "commands": [
       {
         "command": "juejin-me.start",
-        "title": "Start",
-        "category": "Juejin Me"
+        "title": "%contributes.commands.start.title%",
+        "category": "%contributes.commands.category.juejin-me%"
       },
       {
         "command": "juejin-me.configUserId",
-        "title": "Config User Id",
-        "category": "Juejin Me"
+        "title": "%contributes.commands.configUserId.title%",
+        "category": "%contributes.commands.category.juejin-me%"
       },
       {
         "command": "juejin-me.showAuthor",
-        "title": "Show Author",
-        "category": "Juejin Me"
+        "title": "%contributes.commands.showAuthor.title%",
+        "category": "%contributes.commands.category.juejin-me%"
       }
     ],
     "keybindings": [
@@ -76,13 +76,13 @@
       }
     ],
     "configuration": {
-      "title": "Juejin Me",
+      "title": "%configuration.title%",
       "type": "object",
       "properties": {
         "juejin-me.userId": {
           "type": "string",
           "default": "325111174662855",
-          "description": "掘金用户 ID"
+          "description": "%configuration.properties.juejin-me.userId%"
         }
       }
     }

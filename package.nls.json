@@ -1,3 +1,8 @@
 {
-  "displayName": "Juejin Me"
+  "contributes.commands.category.juejin-me": "Juejin Me",
+  "contributes.commands.start.title": "Start",
+  "contributes.commands.configUserId.title": "Config User Id",
+  "contributes.commands.showAuthor.title": "Show Author",
+  "configuration.title": "Juejin Me",
+  "configuration.properties.juejin-me.userId": "Juejin User Id"
 }
