@@ -16,7 +16,7 @@ export function activate(context: vscode.ExtensionContext) {
         'juejin-me',
         localize('extension.webview-panel.title'),
         'assets/icon-luozhu.png',
-        '3.5.17'
+        '^3.5.17'
       );
       // 处理 webview 中的信息
       channel = new Channel(context, currentPanel);
