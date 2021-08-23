@@ -1,17 +1,17 @@
 /* eslint-disable no-param-reassign */
-import axios from 'axios';
+import Axios from 'axios';
 import vscode from 'vscode';
 import qs from 'qs';
 
 // 中文文档: http://t.cn/ROfXFuj
 // 创建实例
-const request = axios.create({
+const axios = Axios.create({
   baseURL: 'https://api.juejin.cn/content_api/v1/',
   timeout: 10000,
 });
 
 // 添加请求拦截器
-request.interceptors.request.use(
+axios.interceptors.request.use(
   config => {
     if (config.method === 'get') {
       config.paramsSerializer = params => qs.stringify(params, { arrayFormat: 'repeat' });
@@ -25,7 +25,7 @@ request.interceptors.request.use(
 );
 
 // 添加响应拦截器
-request.interceptors.response.use(
+axios.interceptors.response.use(
   response => {
     const { data } = response;
     return data;
@@ -36,4 +36,4 @@ request.interceptors.response.use(
   }
 );
 
-export default request;
+export default axios;
