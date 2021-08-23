@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { List, Space, Modal, Input, Radio, BackTop } from 'antd';
 import _union from 'lodash.union';
 import { MessageOutlined, LikeOutlined, EyeOutlined } from '@ant-design/icons';
-import Channel from '@luozhu/vscode-channel';
 import styles from './index.less';
 
 const { Search } = Input;
@@ -16,7 +15,6 @@ const IconText = ({ icon, text }) => (
   </Space>
 );
 
-const channel = new Channel();
 let cursor = 0;
 let tempData: any[] = [];
 const HomePage = () => {
@@ -28,7 +26,7 @@ const HomePage = () => {
   const [initLoading, setInitLoading] = useState(true);
 
   useEffect(() => {
-    channel.bind(async message => {
+    window.channel.bind(async message => {
       switch (message.method) {
         case 'showAuthor': {
           Modal.info({
@@ -52,7 +50,7 @@ const HomePage = () => {
   }, []);
 
   const getData = async () => {
-    const { payload } = (await channel.call({
+    const { payload } = (await window.channel.call({
       eventType: 'request',
       method: 'queryPosts',
       params: { cursor },
@@ -82,7 +80,6 @@ const HomePage = () => {
     const { value } = e.target;
     setCategory(value);
   };
-
   useEffect(() => {
     const searchResult =
       category === '全部'
@@ -104,6 +101,7 @@ const HomePage = () => {
   }, [searchValue, category]);
 
   const userInfo = data[0] ? data[0].author_user_info : {};
+
   return (
     <>
       <BackTop target={() => document.querySelector('#root') as HTMLElement} />

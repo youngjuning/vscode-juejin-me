@@ -7,5 +7,6 @@
   "configuration.properties.juejin-me.userId": "Juejin User Id",
   "extension.activeLog": "Congratulations, your extension \"juejin-me\" is now active!",
   "extension.juejin-me.configUserId.placeHolder": "Please input your juejin user id",
-  "extension.juejin-me.configUserId.validateInput": "Please input your user id"
+  "extension.juejin-me.configUserId.validateInput": "Please input your user id",
+  "extension.webview-panel.title": "Juejin Me"
 }

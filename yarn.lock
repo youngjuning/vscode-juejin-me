@@ -965,10 +965,10 @@
     lodash.get "^4.4.2"
     nanoid "^3.1.25"
 
-"@luozhu/vscode-utils@^0.5.1":
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/@luozhu/vscode-utils/-/vscode-utils-0.5.1.tgz#071710ad0e967f6e0419a9ca75e27f90e0c5253a"
-  integrity sha512-69KWk5sq74Sr2e/YCZUv84KbMw5Xg7ROvPJJdETJZ+QrXlFzlGF36GcAERz3i6gGyjznfML49e/f0hRZgcBWxQ==
+"@luozhu/vscode-utils@^0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@luozhu/vscode-utils/-/vscode-utils-0.6.1.tgz#b11b6d741bcdd83484a4ffa579a95477526f1402"
+  integrity sha512-pptP3ARRsnFMNCxYVN+RU3iU1xia/me0MQYxj48RdZy3E6zZdk8xPQmey05RtnV1ku7xgNqhN/7AObZ3pT6RjQ==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"

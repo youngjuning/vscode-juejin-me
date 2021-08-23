@@ -4,6 +4,7 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
+  locale: {},
   fastRefresh: {},
   history: {
     type: 'memory',

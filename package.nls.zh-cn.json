@@ -7,5 +7,6 @@
   "configuration.properties.juejin-me.userId": "掘金用户 Id",
   "extension.activeLog": "恭喜💐，你的扩展 \"掘金一下\" 现在已经激活！",
   "extension.juejin-me.configUserId.placeHolder": "请输入掘金用户 ID",
-  "extension.juejin-me.configUserId.validateInput": "请输入用户 ID"
+  "extension.juejin-me.configUserId.validateInput": "请输入用户 ID",
+  "extension.webview-panel.title": "掘金一下"
 }

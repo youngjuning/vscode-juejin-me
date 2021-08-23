@@ -14,7 +14,7 @@ export function activate(context: vscode.ExtensionContext) {
       currentPanel = createUmiWebviewPanel(
         context,
         'juejin-me',
-        'Juejin Me',
+        localize('extension.webview-panel.title'),
         'assets/icon-luozhu.png',
         '3.5.17'
       );
