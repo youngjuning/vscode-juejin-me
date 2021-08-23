@@ -6,8 +6,6 @@ import styles from './index.less';
 
 const { Search } = Input;
 
-require('./index.less');
-
 const IconText = ({ icon, text }) => (
   <Space>
     {React.createElement(icon)}
