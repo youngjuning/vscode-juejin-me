@@ -102,8 +102,8 @@
     "commit": "git cz",
     "package": "vsce package --no-yarn",
     "release-it": "standard-version",
-    "prepublish-it": "yarn release-it & git push --follow-tags origin main",
-    "publish-it": "vsce publish --no-yarn"
+    "prepublish-it": "yarn release-it",
+    "publish-it": "git push --follow-tags origin main && vsce publish --no-yarn"
   },
   "config": {
     "commitizen": {
