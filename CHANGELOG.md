@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.15](https://github.com/youngjuning/juejin-me/compare/v0.0.13...v0.0.15) (2021-09-06)
+
+
+### Bug Fixes
+
+* 'zh-cn' -> zh-CN ([ec6c86f](https://github.com/youngjuning/juejin-me/commit/ec6c86f2ece9c230aa29025c657071313b202f69))
+
 ### [0.0.14](https://github.com/youngjuning/juejin-me/compare/v0.0.13...v0.0.14) (2021-08-23)
 
 
