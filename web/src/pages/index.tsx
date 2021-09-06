@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { List, Space, Modal, Input, Radio, BackTop } from 'antd';
 import _union from 'lodash.union';
 import { MessageOutlined, LikeOutlined, EyeOutlined } from '@ant-design/icons';
-import styles from './index.less';
+
+require('./index.less');
 
 const { Search } = Input;
 
@@ -88,8 +89,8 @@ const HomePage = () => {
         ? searchResult
         : searchResult.filter(
             (item: any) =>
-              item.article_info.title.match(searchValue) ||
-              item.article_info.brief_content.match(searchValue)
+              item.article_info.title.match(new RegExp(searchValue, 'i')) ||
+              item.article_info.brief_content.match(new RegExp(searchValue, 'i'))
           );
     if (category === '全部' && searchValue === '') {
       setSearchData(null);
@@ -122,7 +123,7 @@ const HomePage = () => {
         {userInfo.user_name || '掘金一下'}
       </div>
       <Search
-        className={styles.search}
+        className="search"
         disabled={initLoading}
         placeholder="Truth is endless. Keep searching..."
         allowClear
