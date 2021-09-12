@@ -3,6 +3,7 @@
 [![Version for VS Code Extension](https://vsmarketplacebadge.apphb.com/version-short/youngjuning.juejin-me.svg?logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=youngjuning.juejin-me)
 [![Installs](https://vsmarketplacebadge.apphb.com/installs-short/youngjuning.juejin-me.svg)](https://marketplace.visualstudio.com/items?itemName=youngjuning.juejin-me)
 [![Rating](https://vsmarketplacebadge.apphb.com/rating-short/youngjuning.juejin-me.svg)](https://marketplace.visualstudio.com/items?itemName=youngjuning.juejin-me)
+[![](https://vsmarketplacebadge.apphb.com/trending-monthly/youngjuning.juejin-me.svg)](https://marketplace.visualstudio.com/items?itemName=youngjuning.juejin-me)
 [![The MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
 掘金一下是一个专注于管理你的掘金文章的 VS Code 扩展
