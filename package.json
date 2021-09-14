@@ -1,13 +1,15 @@
 {
   "name": "juejin-me",
   "displayName": "掘金一下",
-  "version": "0.0.15",
   "description": "掘金一下是一个专注于管理你的掘金文章的 VS Code 扩展",
-  "private": "true",
+  "version": "0.0.15",
   "icon": "assets/icon.png",
+  "private": "true",
   "workspaces": [
     "web"
   ],
+  "license": "MIT",
+  "publisher": "youngjuning",
   "engines": {
     "vscode": "^1.59.0"
   },
@@ -24,11 +26,13 @@
     "后端",
     "Blog"
   ],
-  "license": "MIT",
-  "publisher": "youngjuning",
+  "bugs": {
+    "url": "https://github.com/youngjuning/vscode-juejin-me/issues"
+  },
+  "homepage": "https://github.com/youngjuning/vscode-juejin-me",
   "repository": {
     "type": "git",
-    "url": "https://github.com/youngjuning/juejin-me.git"
+    "url": "https://github.com/youngjuning/vscode-juejin-me.git"
   },
   "activationEvents": [
     "*",
@@ -96,13 +100,13 @@
     "web-build": "yarn workspace web run build",
     "web-watch": "yarn workspace web run start",
     "test-compile": "tsc -p ./",
-    "lint": "eslint src --ext ts,tsx",
     "pretest": "yarn test-compile && yarn lint",
     "test": "node ./out/test/runTest.js",
-    "commit": "git cz",
+    "lint": "eslint src --ext ts,tsx",
     "package": "vsce package --no-yarn",
     "release-it": "standard-version",
-    "publish-it": "vsce publish --no-yarn"
+    "publish-it": "vsce publish --no-yarn",
+    "commit": "git cz"
   },
   "config": {
     "commitizen": {
@@ -120,6 +124,13 @@
     "**/*.{md,json,less}": [
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "@luozhu/vscode-channel": "^0.5.5",
+    "@luozhu/vscode-utils": "^0.6.1",
+    "axios": "^0.21.1",
+    "qs": "^6.10.1",
+    "vscode-nls-i18n": "^0.2.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
@@ -147,12 +158,5 @@
     "vsce": "^1.96.1",
     "vscode-test": "^1.5.0",
     "yorkie": "^2.0.0"
-  },
-  "dependencies": {
-    "@luozhu/vscode-channel": "^0.5.5",
-    "@luozhu/vscode-utils": "^0.6.1",
-    "axios": "^0.21.1",
-    "qs": "^6.10.1",
-    "vscode-nls-i18n": "^0.2.4"
   }
 }
