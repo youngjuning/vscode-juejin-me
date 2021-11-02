@@ -4,7 +4,7 @@ import Channel from '@luozhu/vscode-channel';
 require('./index.less');
 
 window.channel = new Channel();
-setLocale(window.vscodeEnv.language === 'zh-cn' ? 'zh-CN' : window.vscodeEnv.language, false);
+setLocale('zh-CN', false);
 
 export default props => {
   return (

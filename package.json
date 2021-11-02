@@ -92,6 +92,7 @@
     }
   },
   "scripts": {
+    "postinstall": "npx patch-package",
     "vscode:prepublish": "yarn web-build && yarn esbuild-base --minify",
     "preesbuild-base": "rimraf out",
     "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node",
@@ -126,8 +127,8 @@
     ]
   },
   "dependencies": {
-    "@luozhu/vscode-channel": "^0.5.5",
-    "@luozhu/vscode-utils": "^0.6.1",
+    "@luozhu/vscode-channel": "0.5.5",
+    "@luozhu/vscode-utils": "0.6.1",
     "axios": "^0.21.1",
     "qs": "^6.10.1",
     "vscode-nls-i18n": "^0.2.4"

@@ -957,7 +957,7 @@
   resolved "https://registry.yarnpkg.com/@luozhu/prettier-config/-/prettier-config-1.0.3.tgz#ba19ba65c6d5261c250514756ed0d1b0443e4893"
   integrity sha512-2rBLWAdaKnUjPn6SOajA14LBw5OTozrBXxf3VoS5NALSbzBzg1NJS7tKCUf6QcELkxdIVmXx4Q43ApYtaRb9bQ==
 
-"@luozhu/vscode-channel@^0.5.5":
+"@luozhu/vscode-channel@0.5.5":
   version "0.5.5"
   resolved "https://registry.yarnpkg.com/@luozhu/vscode-channel/-/vscode-channel-0.5.5.tgz#86e1218ad7dd0f9221333990a95b0b55c8ad0d0d"
   integrity sha512-pBcb16SgqqAnBQ9YviHb5pKyk2A2BUcSxqmQbo3JI6zugPd7nUGdfCWL6iZCsciF564gdem7L/lVdqnhFlIzyw==
@@ -965,7 +965,7 @@
     lodash.get "^4.4.2"
     nanoid "^3.1.25"
 
-"@luozhu/vscode-utils@^0.6.1":
+"@luozhu/vscode-utils@0.6.1":
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/@luozhu/vscode-utils/-/vscode-utils-0.6.1.tgz#b11b6d741bcdd83484a4ffa579a95477526f1402"
   integrity sha512-pptP3ARRsnFMNCxYVN+RU3iU1xia/me0MQYxj48RdZy3E6zZdk8xPQmey05RtnV1ku7xgNqhN/7AObZ3pT6RjQ==
